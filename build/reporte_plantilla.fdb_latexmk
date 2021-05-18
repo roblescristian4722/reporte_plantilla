@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1621300404 "d:/reporte_plantilla/reporte_plantilla.tex" "build/reporte_plantilla.pdf" "reporte_plantilla" 1621300406
+["pdflatex"] 1621301197 "d:/reporte_plantilla/reporte_plantilla.tex" "build/reporte_plantilla.pdf" "reporte_plantilla" 1621301200
   "C:/Users/krist/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1621285083 9557845 3307850d32f14bd7242443429e4b7dde ""
   "C:/Users/krist/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1621298673 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458477487 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -36,11 +36,11 @@
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/latex-tools/xspace.sty" 1602847618 4698 3e6071704acf4f66392376b7b66ae02c ""
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/Times.sty" 1585930371 888 8e0e5c8cca7b18e0400f97f5a2b90a99 ""
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/t1ptm.fd" 1585257378 817 61d7da1e9f9e74989b196d147e623736 ""
-  "build/reporte_plantilla.aux" 1621300406 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
-  "d:/reporte_plantilla/reporte_plantilla.tex" 1621300403 3595 c5cd53aec98a1e255abd219e6952f250 ""
+  "build/reporte_plantilla.aux" 1621301199 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
+  "d:/reporte_plantilla/reporte_plantilla.tex" 1621301196 3805 23546a2d9292d0f7ae018fbd238b429b ""
   "imgs/logo_udg.png" 1621297189 190953 c8ff814fa81e80675537ca54e83de4ae ""
-  "reporte_plantilla.tex" 1621300403 3595 c5cd53aec98a1e255abd219e6952f250 ""
+  "reporte_plantilla.tex" 1621301196 3805 23546a2d9292d0f7ae018fbd238b429b ""
   (generated)
   "build/reporte_plantilla.log"
-  "build/reporte_plantilla.aux"
   "build/reporte_plantilla.pdf"
+  "build/reporte_plantilla.aux"
