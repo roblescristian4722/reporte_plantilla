@@ -1,5 +1,5 @@
 % Artículo de doble cara
-\documentclass[oneside]{article}
+\documentclass[12pt, oneside]{article}
 
 %%%% Dependencias %%%%
 % Imágenes de prueba
@@ -14,15 +14,25 @@
 \usepackage[T1]{fontenc} 
 % Para establecer los márgenes de la página
 \usepackage[letterpaper, bindingoffset=0.5cm, left=3cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+% For times new roman
+\usepackage{Times}
 
 %%%% Declaraciones %%%%
+
+\makeatletter
 
 % Inicia contador de páginas en cero
 \setcounter{page}{0}
 
+\font\titles=cmr12 at 18pt
+
 % Título
 \newcommand{\actTitle}{FCFS}
-\newcommand{\actNum}{Actividad 6}
+\newcommand{\calendar}{2021A}
+\newcommand{\nrc}{103844}
+\newcommand{\signSec}{D01}
+\newcommand{\profName}{Profa. Becerra Velázquez Violeta del Rocío}
+\newcommand{\actNum}{ACTIVIDAD DE APRENDIZAJE 6: }
 \title{\tiText}
 
 % Macro con mi nombre
@@ -38,12 +48,16 @@
     \end{figure}
 }
 
+% Fuente a utilizar en todo el documento
+
+
 % Header para páginas pares y distintas a cero
 \pagestyle{fancy}
 \fancyhead{}
 \fancyhead[L]{
     \ifthenelse{
         \not \isodd{\value{page}} \and \value{page} > 0} % condición
+        % Imprime el título de la actividad a la izquierda del header
         {\actTitle} % si la condición es correcta
         {} % si la condición es falsa
 }
@@ -51,6 +65,7 @@
 \fancyhead[R]{
     \ifthenelse{
         \isodd{\value{page}}} % condición
+        % imprime la asignatura a la derecha del header
         {\sign} % si la condición es correcta
         {} % si la condición es falsa
 }
@@ -59,6 +74,7 @@
 \fancyfoot[R]{
     \ifthenelse{
         \isodd{\value{page}}} % condición
+        % Imprime mi nombre a la derecha del footer
         {\myName} % si la condición es correcta
         {} % si la condición es falsa
 }
@@ -66,9 +82,10 @@
 % Footer para páginas pares
 \fancyfoot[C]{
     \ifthenelse{
-        \isodd{\value{page}}} % condición
-        {} % si la condición es correcta
-        {\thepage} % si la condición es falsa
+        \not \isodd{\value{page}} \and \value{page} > 0} % condición
+        % Imprime el número de página al centro del footer
+        {\thepage} % si la condición es correcta
+        {} % si la condición es falsa
 }
         
 \renewcommand{\headrulewidth}{0pt}
@@ -77,9 +94,37 @@
 \begin{document}
 %%%% Portada %%%%
 
-\begin{center}
-\includegraphics[width=150px]{imgs/logo_udg.png}
-\end{center}
+\begingroup
+    \fontsize{18pt}{22pt}\selectfont
+    \begin{center}
+        Universidad de Guadalajara
+
+        Centro Universitario de Ciencias Exactas e Ingenierías
+
+        \includegraphics[width=150px]{imgs/logo_udg.png}
+
+        \textbf{\actNum}
+        \textbf{\actTitle}
+    \end{center}
+\endgroup
+
+\begingroup
+    \fontsize{16pt}{18pt}\selectfont
+    Alumno: \myName
+
+    Ingeniería en Computación
+
+    \sign
+
+    Calendario: \calendar
+
+    NRC: \nrc
+
+    Sección: \signSec
+
+    \profName
+\endgroup
+
 
 % fin de página (fin de portada)
 \newpage
