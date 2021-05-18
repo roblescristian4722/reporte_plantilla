@@ -15,7 +15,16 @@
 % Para establecer los márgenes de la página
 \usepackage[letterpaper, bindingoffset=0.5cm, left=3cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
 % For times new roman
-\usepackage{Times}
+\usepackage{times}
+
+% Interlineado
+\renewcommand{\baselinestretch}{1.2}
+
+% salto entre párrafos (6pt predeterminado y 0 extras)
+\setlength\parskip{6pt plus 0pt}
+
+%sangría
+\setlength\parindent{1.27cm}
 
 %%%% Declaraciones %%%%
 % Inicia contador de páginas en cero
@@ -32,7 +41,7 @@
 
 % Título
 \newcommand{\actTitle}{FCFS}
-\newcommand{\actNum}{ACTIVIDAD DE APRENDIZAJE 6: }
+\newcommand{\actNum}{ACTIVIDAD DE APRENDIZAJE 6:}
 \title{\tiText}
 
 % Macro con mi nombre
@@ -96,41 +105,58 @@
 %%%% Portada %%%%
 % Nuevo grupo
 \begingroup
+    \noindent
     % Tamaño de la fuente del grupo
-    \fontsize{18pt}{22pt}\selectfont
+    \fontsize{18pt}{18pt}\selectfont
     \begin{center}
         Universidad de Guadalajara
 
-        Centro Universitario de Ciencias Exactas e Ingenierías \newline
+        Centro Universitario de Ciencias Exactas e Ingenierías
 
-        \includegraphics[width=200px]{imgs/logo_udg.png} \break
+        \includegraphics[width=150px]{imgs/logo_udg.png}
+    \end{center}
+\endgroup
 
+\begingroup
+    \fontsize{16pt}{16pt}\selectfont
+    \begin{center}
         \textbf{\actNum}
         \textbf{\actTitle} \newline
     \end{center}
 \endgroup
 
 \begingroup
-    \fontsize{16pt}{18pt}\selectfont
+\fontsize{14pt}{14pt}\selectfont
+        \noindent
         Alumno: \myName
 
+        \noindent
         Código: \code \newline
 
+        \noindent
+        Departamento de Ciencias Computacionales
+
+        \noindent
         Ingeniería en Computación
 
+        \noindent
         \sign
 
+        \noindent
         Calendario: \calendar
 
+        \noindent
         NRC: \nrc
 
+        \noindent
         Sección: \signSec
 
+        \noindent
         \profName \newline \break
 
         \begin{flushright}
             Guadalajara, Jalisco, México
-            
+
             10 de mayo del 2021
         \end{flushright}
 \endgroup
@@ -141,7 +167,11 @@
 
 %%%% Contenido %%%%
 \blindtext
+
+
 \blindtext
+
+
 \blindtext
 \newpage
 
