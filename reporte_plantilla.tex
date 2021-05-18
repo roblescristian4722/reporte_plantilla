@@ -18,12 +18,10 @@
 \usepackage{Times}
 
 %%%% Declaraciones %%%%
-
-\makeatletter
-
 % Inicia contador de páginas en cero
 \setcounter{page}{0}
 
+% Tamaño de la fuente para títulos
 \font\titles=cmr12 at 18pt
 
 \newcommand{\code}{215472278}
@@ -94,16 +92,18 @@
 
 %%%% Inicia el documento %%%%
 \begin{document}
-%%%% Portada %%%%
 
+%%%% Portada %%%%
+% Nuevo grupo
 \begingroup
+    % Tamaño de la fuente del grupo
     \fontsize{18pt}{22pt}\selectfont
     \begin{center}
         Universidad de Guadalajara
 
         Centro Universitario de Ciencias Exactas e Ingenierías \newline
 
-        \includegraphics[width=150px]{imgs/logo_udg.png} \break
+        \includegraphics[width=200px]{imgs/logo_udg.png} \break
 
         \textbf{\actNum}
         \textbf{\actTitle} \newline
@@ -126,9 +126,11 @@
 
         Sección: \signSec
 
-        \profName
+        \profName \newline \break
 
         \begin{flushright}
+            Guadalajara, Jalisco, México
+            
             10 de mayo del 2021
         \end{flushright}
 \endgroup
