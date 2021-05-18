@@ -1,0 +1,120 @@
+% Artículo de doble cara
+\documentclass[oneside]{article}
+
+%%%% Dependencias %%%%
+% Imágenes de prueba
+\usepackage{graphicx}
+% Texto de prueba (lorem ipsum)
+\usepackage{blindtext}
+% Headers
+\usepackage{fancyhdr}
+% para condicionales
+\usepackage{ifthen}
+% Símbolos matemáticos
+\usepackage[T1]{fontenc} 
+% Para establecer los márgenes de la página
+\usepackage[letterpaper, bindingoffset=0.5cm, left=3cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+%%%% Declaraciones %%%%
+
+% Inicia contador de páginas en cero
+\setcounter{page}{0}
+
+% Título
+\newcommand{\actTitle}{FCFS}
+\newcommand{\actNum}{Actividad 6}
+\title{\tiText}
+
+% Macro con mi nombre
+\newcommand{\myName}{Cristian Ismael Robles Perez}
+% Macro con el nombre de la asignatura
+\newcommand{\sign}{Seminario de Solución de Problemas de Sistemas Operativos}
+% Figura genérica [width]{path, caption}
+\newcommand{\fgr}[3][0.8\textwidth]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=#1,keepaspectratio]{#2}
+        \caption{#3}
+    \end{figure}
+}
+
+% Header para páginas pares y distintas a cero
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{
+    \ifthenelse{
+        \not \isodd{\value{page}} \and \value{page} > 0} % condición
+        {\actTitle} % si la condición es correcta
+        {} % si la condición es falsa
+}
+% Header para páginas impares
+\fancyhead[R]{
+    \ifthenelse{
+        \isodd{\value{page}}} % condición
+        {\sign} % si la condición es correcta
+        {} % si la condición es falsa
+}
+
+% Footer para páginas impares
+\fancyfoot[R]{
+    \ifthenelse{
+        \isodd{\value{page}}} % condición
+        {\myName} % si la condición es correcta
+        {} % si la condición es falsa
+}
+
+% Footer para páginas pares
+\fancyfoot[C]{
+    \ifthenelse{
+        \isodd{\value{page}}} % condición
+        {} % si la condición es correcta
+        {\thepage} % si la condición es falsa
+}
+        
+\renewcommand{\headrulewidth}{0pt}
+
+%%%% Inicia el documento %%%%
+\begin{document}
+%%%% Portada %%%%
+
+\begin{center}
+\includegraphics[width=150px]{imgs/logo_udg.png}
+\end{center}
+
+% fin de página (fin de portada)
+\newpage
+
+%%%% Contenido %%%%
+\blindtext
+\blindtext
+\blindtext
+\newpage
+
+\blindtext
+\blindtext
+\blindtext
+\blindtext
+\blindtext
+\blindtext
+\blindtext
+
+\blindtext
+\blindtext
+
+\blindtext
+
+\blindtext
++
+Otro blindtext xd
+
+\blindtext
+
+Hola cara de cola
+
+\blindtext
+
+Este es un ejemplo
+
+\blindtext
+
+\end{document}
